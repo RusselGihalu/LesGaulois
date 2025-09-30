@@ -22,7 +22,7 @@ private int forcePotion ;
 		if(!resterPotion()) {
 			this.quantitePotion = 0 ;
 		}else {
-			this.forcePotion --;
+			this.quantitePotion --;
 		}
 		
 		return this.forcePotion ;

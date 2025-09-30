@@ -24,6 +24,7 @@ public class Romain {
 	}
    
 	public void recevoirCoup(int forceCoup) {
+		
 		this.force =  this.force - forceCoup;
 		
 		if (this.force<1) {
