@@ -4,6 +4,7 @@ public class Gaulois {
 	private String nom;
 	private int force;
 	private int effetPotion = 1;
+	private village village ;
 
 	public Gaulois(String nom, int force) {
 		this.nom = nom;
@@ -13,6 +14,12 @@ public class Gaulois {
 
 	public String getNom() {
 		return nom;
+	}
+	
+	
+
+	public void setVillage(village village) {
+		this.village = village;
 	}
 
 	public void parler(String texte) {
@@ -42,6 +49,16 @@ public class Gaulois {
 		this.effetPotion = forcePotion;
 
 	}
+	
+	public void sePresenter() {
+		if(village == null ) {
+			System.out.println("Le Gaulois " + this.nom + ": Bonjour, je m'appelle  "+ this.nom + ". je voyge de villages en villages.");
+		}else if (village.getChef() == this) {
+			System.out.println("Le Gaulois " + this.nom + ": Bonjour, je m'appelle  "+ this.nom + ". Je suis le chef du village "  + this.village.getNom() + ".");
+		}else {
+			System.out.println("Le Gaulois " + this.nom + ": Bonjour, je m'appelle  "+ this.nom + ". j'habite le village " + this.village.getNom() + ".");
+		}
+	}
 
 	public static void main(String[] args) {
 
@@ -49,5 +66,7 @@ public class Gaulois {
 		System.out.println(asterix.toString());
 
 	}
+	
+	
 
 }
