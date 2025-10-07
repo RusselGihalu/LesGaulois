@@ -13,8 +13,9 @@ public class Romain {
 
 	public Romain(String nom, int force) {
 		this.nom = nom;
+		 
 		this.force = force;
-		System.out.println("Force Romain Positf : " + this.isIvariantVerified());
+		assert  this.isIvariantVerified(); 
 		
 	}
 
@@ -49,6 +50,8 @@ public class Romain {
 
 		}
 		
+		assert this.isIvariantVerified(); 
+		
 		}
 		
 		// Postcondition Force diminue
@@ -60,8 +63,8 @@ public class Romain {
 			System.out.println("La force du Romain " + this.nom + " n'a pas diminuée.");
 		}
 		
+		assert this.isIvariantVerified() ;
 		
-		System.out.println("Force Romain Positf : " + this.isIvariantVerified());
 	}
 	
 
@@ -82,7 +85,7 @@ public class Romain {
 			comparerEtAffecter(nbEquipement, equipement);
 			break;
 		default:
-			throw new IllegalArgumentException("Unexpected value: " + nbEquipement);
+			System.out.println("index incorecte");
 		}
 	}
 	
